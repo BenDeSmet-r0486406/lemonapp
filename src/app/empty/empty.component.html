@@ -1,0 +1,18 @@
+<h1>
+  iTunes Music Searcher
+</h1>
+
+<input type="text" class="form-control" (input)="onSearchChange($event.target.value)">
+<p id="print">{{inputValue}}</p>
+
+<ul class="songs">
+  <li *ngFor="let song of songs">
+    <div><img src="{{song.artworkUrl60}}"> -
+      {{song.trackName}} -
+      {{song.artistName}} -
+      <a [routerLink] = "['/song', song.trackId]">
+        details
+      </a>
+    </div>
+  </li>
+</ul>

@@ -1,14 +1,13 @@
-import { Component } from '@angular/core';
-import {ConfigService} from './config/config.service';
-import {jsonpFactory} from '@angular/http/src/http_module';
+import {Component, OnInit} from '@angular/core';
+import {ConfigService} from '../config/config.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-empty',
+  templateUrl: './empty.component.html',
+  styleUrls: ['./empty.component.css']
 })
-export class AppComponent {
-  title = 'iTunes Music Searcher!';
+export class EmptyComponent {
+  itle = 'iTunes Music Searcher!';
   inputValue = 'Please type in a filter...';
   configService: any;
   songs : any[];
